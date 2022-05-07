@@ -1,0 +1,11 @@
+<h2>Form data stored to the localStorage reactively</h2>
+<form [formGroup]="fg" (ngSubmit)="submit()">
+  <div>
+    <input [formControlName]="'age'" placeholder="age" type="number"/>
+    <span [formGroupName]="'name'">
+      <input [formControlName]="'first'" placeholder="First Name"/>
+      <input [formControlName]="'last'" placeholder="Last Name"/>
+    </span>
+    <button [disabled]="fg.invalid">Submit</button>
+  </div>
+</form>
